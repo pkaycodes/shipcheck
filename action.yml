@@ -1,0 +1,38 @@
+name: Shipcheck
+description: Audit a repository's shipping readiness — README, license, tests, CI, secrets and package hygiene.
+author: Papakwame Afrifa Mensa
+branding:
+  icon: check-circle
+  color: green
+
+inputs:
+  path:
+    description: Repository directory to audit, relative to the workspace.
+    required: false
+    default: "."
+  fail-under:
+    description: Minimum score (0–100) required for the step to pass.
+    required: false
+    default: "70"
+  strict:
+    description: Fail on any warning or failure, regardless of score.
+    required: false
+    default: "false"
+
+outputs:
+  score:
+    description: Weighted score from 0 to 100.
+  grade:
+    description: Letter grade from A to F.
+  passed:
+    description: Number of checks that passed.
+  warnings:
+    description: Number of checks with warnings.
+  failed:
+    description: Number of failed checks.
+  skipped:
+    description: Number of checks that did not apply.
+
+runs:
+  using: node24
+  main: src/action.js

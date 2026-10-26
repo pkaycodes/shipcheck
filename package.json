@@ -1,0 +1,51 @@
+{
+  "name": "@pkaycodes/shipcheck",
+  "version": "1.0.0",
+  "description": "Audit a repository's shipping readiness: README, license, tests, CI, secrets and package hygiene.",
+  "type": "module",
+  "bin": {
+    "shipcheck": "./bin/shipcheck.js"
+  },
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "bin",
+    "src",
+    "docs",
+    "action.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "audit": "node bin/shipcheck.js . --fail-under 90",
+    "pack:check": "npm pack --dry-run",
+    "prepublishOnly": "npm test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "cli",
+    "audit",
+    "repository",
+    "readme",
+    "ci",
+    "security",
+    "developer-tools",
+    "zero-dependency"
+  ],
+  "author": "Papakwame Afrifa Mensa",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pkaycodes/shipcheck.git"
+  },
+  "homepage": "https://github.com/pkaycodes/shipcheck#readme",
+  "bugs": {
+    "url": "https://github.com/pkaycodes/shipcheck/issues"
+  }
+}

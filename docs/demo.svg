@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="620" viewBox="0 0 1180 620" role="img" aria-labelledby="title desc">
+  <title id="title">Shipcheck terminal report</title>
+  <desc id="desc">Shipcheck scores a repository and lists README, license, tests, CI, secrets, gitignore, environment, package and lockfile checks.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#231f1a"/>
+      <stop offset="1" stop-color="#181511"/>
+    </linearGradient>
+  </defs>
+  <rect width="1180" height="620" rx="18" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="1179" height="619" rx="17.5" fill="none" stroke="#3a342d"/>
+  <circle cx="36" cy="36" r="7" fill="#ff5f57"/>
+  <circle cx="60" cy="36" r="7" fill="#febc2e"/>
+  <circle cx="84" cy="36" r="7" fill="#28c840"/>
+  <text xml:space="preserve" x="1100" y="41" text-anchor="end" fill="#6f665a" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">shipcheck · terminal</text>
+  <line x1="1" y1="64" x2="1179" y2="64" stroke="#2c2822"/>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" xml:space="preserve">
+    <text xml:space="preserve" x="48" y="104" fill="#e9e2d6" font-size="15"><tspan font-weight="700">shipcheck</tspan><tspan fill="#8b8174"> v1.0.0 · .</tspan></text>
+    <text xml:space="preserve" x="48" y="128" fill="#e9e2d6">9 checks · 43 files</text>
+    <text xml:space="preserve" x="48" y="176" fill="#8b8174" font-size="15"><tspan>  Score  </tspan><tspan fill="#7fd18b" font-weight="700">100/100</tspan><tspan>   Grade </tspan><tspan fill="#7fd18b" font-weight="700">A</tspan></text>
+    <text xml:space="preserve" x="48" y="200" fill="#8b8174">  8 passed · 0 warnings · 0 failed · 1 skipped</text>
+    <text xml:space="preserve" x="48" y="248" fill="#e9e2d6"><tspan fill="#7fd18b">  ✓</tspan><tspan> README       15.0/15  Install, usage, testing and license are documented.</tspan></text>
+    <text xml:space="preserve" x="48" y="272" fill="#e9e2d6"><tspan fill="#7fd18b">  ✓</tspan><tspan> License      12.0/12  MIT license detected.</tspan></text>
+    <text xml:space="preserve" x="48" y="296" fill="#e9e2d6"><tspan fill="#7fd18b">  ✓</tspan><tspan> Tests        15.0/15  Test script and 10 test files found.</tspan></text>
+    <text xml:space="preserve" x="48" y="320" fill="#e9e2d6"><tspan fill="#7fd18b">  ✓</tspan><tspan> CI           12.0/12  CI runs the test suite (2 config files).</tspan></text>
+    <text xml:space="preserve" x="48" y="344" fill="#e9e2d6"><tspan fill="#7fd18b">  ✓</tspan><tspan> Secrets      15.0/15  No hard-coded secrets found in 41 files.</tspan></text>
+    <text xml:space="preserve" x="48" y="368" fill="#e9e2d6"><tspan fill="#7fd18b">  ✓</tspan><tspan> .gitignore     8.0/8  Covers dependencies, environment files, build output and OS files.</tspan></text>
+    <text xml:space="preserve" x="48" y="392" fill="#e9e2d6"><tspan fill="#8b8174">  –</tspan><tspan> Environment        —  No environment files or env-loading patterns detected.</tspan></text>
+    <text xml:space="preserve" x="48" y="416" fill="#e9e2d6"><tspan fill="#7fd18b">  ✓</tspan><tspan> Package      10.0/10  Package metadata is complete.</tspan></text>
+    <text xml:space="preserve" x="48" y="440" fill="#e9e2d6"><tspan fill="#7fd18b">  ✓</tspan><tspan> Lockfile       5.0/5  package-lock.json found (npm).</tspan></text>
+    <text xml:space="preserve" x="48" y="488" fill="#7fd18b" font-weight="700">  Ready to ship.</text>
+    <text xml:space="preserve" x="48" y="536" fill="#8b8174">Run with --json for machine-readable output.</text>
+  </g>
+</svg>
