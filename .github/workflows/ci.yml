@@ -52,5 +52,32 @@ jobs:
       - name: Check the npm package contents
         run: npm pack --dry-run
 
+      - name: Install the packed CLI
+        run: |
+          npm pack --pack-destination "$RUNNER_TEMP"
+          npm install --prefix "$RUNNER_TEMP/install" \
+            "$RUNNER_TEMP"/pkaycodes-shipcheck-*.tgz
+          "$RUNNER_TEMP/install/node_modules/.bin/shipcheck" --version
+          "$RUNNER_TEMP/install/node_modules/.bin/shipcheck" . --fail-under 90
+
       - name: Audit Shipcheck with Shipcheck
         run: node bin/shipcheck.js . --fail-under 90
+
+  action:
+    name: Local action smoke test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Run the Shipcheck action
+        id: shipcheck
+        uses: ./
+        with:
+          fail-under: 90
+
+      - name: Verify action outputs
+        run: |
+          test "${{ steps.shipcheck.outputs.score }}" = "100"
+          test "${{ steps.shipcheck.outputs.grade }}" = "A"
+          test "${{ steps.shipcheck.outputs.failed }}" = "0"
