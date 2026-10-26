@@ -28,6 +28,9 @@
   "engines": {
     "node": ">=20"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "cli",
     "audit",
